@@ -73,32 +73,34 @@
 // console.log(arr9);
 
 
-console.log("------------------ using while loop ---------------------");
+// console.log("------------------ using while loop ---------------------");
 
 
-let arr = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
-let i = 0
-while(i < arr.length){
-    console.log(arr[i]);
-    i++;
-}
-console.log("------------------ using for loop ---------------------");
+// let arr = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+// let i = 0
+// while(i < arr.length){
+//     console.log(arr[i]);
+//     i++;
+// }
+// console.log("------------------ using for loop ---------------------");
 
 
-for (let index = 0; index < arr.length; index++) {
-    const element = arr[index];
-    console.log(element);
-}
+// for (let index = 0; index < arr.length; index++) {
+//     const element = arr[index];
+//     console.log(element);
+// }
 
-console.log("------------------ using do while loop ---------------------");
-let j = 0;
-do {
-    console.log(arr[j]);
-    j++;
-} while (j < arr.length);
+// console.log("------------------ using do while loop ---------------------");
+// let j = 0;
+// do {
+//     console.log(arr[j]);
+//     j++;
+// } while (j < arr.length);
 
-console.log("------------------ using for each loop ---------------------");
-arr.forEach((element) => {
-    console.log(element);
-});
+// console.log("------------------ using for each loop ---------------------");
+// arr.forEach((element) => {
+//     console.log(element);
+// });
+
+
 
