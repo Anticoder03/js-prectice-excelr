@@ -50,24 +50,55 @@
 
 // push , unpush, shift, unshift
 
-let arr9 = [1,2,3,4];
-arr9.push(5); // adds 5 at the end of the array
-console.log(arr9);
+// let arr9 = [1,2,3,4];
+// arr9.push(5); // adds 5 at the end of the array
+// console.log(arr9);
 
-arr9.pop();
-console.log(arr9);
+// arr9.pop();
+// console.log(arr9);
 
-arr9.unshift(0);
-console.log(arr9);
+// arr9.unshift(0);
+// console.log(arr9);
 
-arr9.shift();
-console.log(arr9);
+// arr9.shift();
+// console.log(arr9);
 
-// delete 
-delete arr9[1]; // deletes the element at index 1 but does not change the length of the array
+// // delete 
+// delete arr9[1]; // deletes the element at index 1 but does not change the length of the array
 
-console.log(arr9);
+// console.log(arr9);
 
-// add at any index
-arr9[1] = 20;
-console.log(arr9);
+// // add at any index
+// arr9[1] = 20;
+// console.log(arr9);
+
+
+console.log("------------------ using while loop ---------------------");
+
+
+let arr = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+let i = 0
+while(i < arr.length){
+    console.log(arr[i]);
+    i++;
+}
+console.log("------------------ using for loop ---------------------");
+
+
+for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    console.log(element);
+}
+
+console.log("------------------ using do while loop ---------------------");
+let j = 0;
+do {
+    console.log(arr[j]);
+    j++;
+} while (j < arr.length);
+
+console.log("------------------ using for each loop ---------------------");
+arr.forEach((element) => {
+    console.log(element);
+});
+
