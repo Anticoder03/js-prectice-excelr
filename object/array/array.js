@@ -103,4 +103,12 @@
 // });
 
 
+// square of every element in the array
+let arr = [1,2,3,4,5];
+let squaredArr = arr.map((element) => element * element);
+console.log(squaredArr);
 
+
+// retirn even numbers from the array
+let evenArr = arr.filter((element) => element % 2 === 0);
+console.log(evenArr);
