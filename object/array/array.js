@@ -104,11 +104,27 @@
 
 
 // square of every element in the array
+// let arr = [1,2,3,4,5];
+// let squaredArr = arr.map((element) => element * element);
+// console.log(squaredArr);
+
+
+// // retirn even numbers from the array
+// let evenArr = arr.filter((element) => element % 2 === 0);
+// console.log(evenArr);
+
+
+// find findLast every , some 
 let arr = [1,2,3,4,5];
-let squaredArr = arr.map((element) => element * element);
-console.log(squaredArr);
 
+let found = arr.find((element) => element === 3);
+console.log(found);
 
-// retirn even numbers from the array
-let evenArr = arr.filter((element) => element % 2 === 0);
-console.log(evenArr);
+let foundLast = arr.findLast((element) => element === 3);
+console.log(foundLast);
+
+let allEven = arr.every((element) => element % 2 === 0);
+console.log(allEven);
+
+let someEven = arr.some((element) => element % 2 === 0);
+console.log(someEven);
