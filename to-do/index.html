@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #218838;
+        }
+        ul{
+            margin-top: 20px;
+            list-style-type: none;
+        }
+        li{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addTaskButton" onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+</body>
+
+<script>
+    let inp = document.getElementById("taskInput");
+    let btn = document.getElementById("addTaskButton");
+
+    function addTask(){
+        let task = inp.value.trim();
+        if(task){
+            let li = document.createElement("li");
+            li.textContent = task;
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "X";
+            deleteBtn.style.backgroundColor = "#dc3545";
+            deleteBtn.style.color = "white";
+            deleteBtn.style.border = "none";
+            deleteBtn.style.borderRadius = "5px";
+            deleteBtn.style.width = "40px"
+            deleteBtn.style.cursor = "pointer";
+
+            deleteBtn.onclick = function(){
+                li.remove();
+            };
+
+            li.appendChild(deleteBtn);
+            document.getElementById("taskList").appendChild(li);
+            inp.value = "";
+        } else {
+            alert("Please enter a task.");
+        }
+    }
+</script>
+</html>
