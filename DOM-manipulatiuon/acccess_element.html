@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="p">
+
+    </p>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <div class="container">
+
+    </div>
+    <div class="container"></div>
+
+    <p class="p1">first</p>
+    <p class="p1">seccond</p>
+</body>
+<script>
+    let p = document.getElementById("p");
+    console.log(p);
+
+    let h1 = document.getElementsByTagName("h1");
+    console.log(h1);
+
+    let container = document.getElementsByClassName("container");
+    console.log(container);
+
+    let p1 = document.querySelector(".p1");
+    console.log(p1);
+
+    let all_p1 = document.querySelectorAll(".p1");
+    console.log(all_p1);
+
+    
+</script>
+</html>
