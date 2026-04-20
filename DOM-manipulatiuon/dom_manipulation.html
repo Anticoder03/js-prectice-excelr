@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="container">
+      
+    </div>
+</body>
+<script>
+    // DOM manipulation code will go here
+    let container = document.getElementById("container");
+
+    let p = document.createElement("p");
+    // p.innerHTML = "<b>This is a new paragraph.</b>";
+    p.innerText = " <b>This is a new paragraph.</b>";
+    p.style.color = "blue";
+    container.append(p);
+
+    
+</script>
+</html>
