@@ -82,5 +82,20 @@ for (let i = 0; i < arr3.length; i++) {
         unique.push(arr3[i]);
     }   
 }
-console.log(unique)
+// console.log(unique)
+
+
+let largest = -Infinity;
+let second_largest = -Infinity;
+
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3[i] > largest) {
+        second_largest = largest;
+        largest = arr3[i];
+    } else if (arr3[i] > second_largest && arr3[i] !== largest) {
+        second_largest = arr3[i];
+    }
+}
+console.log(largest)
+console.log(second_largest)
 
