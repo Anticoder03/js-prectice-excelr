@@ -9,6 +9,15 @@
     <div id="container">
       
     </div>
+    <div id="removed">
+        this is removed
+    </div>
+
+    <div id="parent">
+        <div id="child_removed">
+            this is a child element that will be removed
+        </div>
+    </div>
 </body>
 <script>
     // DOM manipulation code will go here
@@ -20,6 +29,41 @@
     p.style.color = "blue";
     container.append(p);
 
+    let removed = document.querySelector("#removed");
+    removed.remove();
+    console.log(removed);
+
+    let parent = document.getElementById("parent");
+    let child_removed = document.getElementById("child_removed");
+    parent.removeChild(child_removed);
+    parent.innerHTML  = 2100/4;
     
+
+    let h2 = document.createElement('h2')
+    h2.innerHTML = "This is a new heading";
+
+    container.appendChild(h2);
+
+    let h3 = document.createElement('h3');
+    h3.innerHTML = "This is a new subheading";
+
+    container.prepend(h3);
+
+    let h4 = document.createElement('h4');
+    h4.innerHTML = "This is a new subheading";
+
+    container.insertAdjacentElement("afterend", h4);
+
+    container.appendChild(h4);
+
+    let h4 = document.createElement('h4');
+    h4.innerHTML = "This is a new subheading";
+
+    container.insertAdjacentElement("beforebegin", h2);
+
+
+    
+
+
 </script>
 </html>

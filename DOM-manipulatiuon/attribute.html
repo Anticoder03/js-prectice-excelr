@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading" id="head" style="color:red;">Hello, World!  </h1>
+
+    <img src="" alt="">
+</body>
+<script>
+    let heading = document.querySelector(".heading");
+    let img = document.querySelector("img");
+
+    console.log(heading);
+
+    console.log(heading.getAttribute("id"));
+    console.log(heading.getAttribute("class"));
+    console.log(heading.getAttribute("style"));
+
+    img.setAttribute("src", "https://www.w3schools.com/w3images/lights.jpg");
+    img.setAttribute("alt", "A beautiful scenery");
+    img.setAttribute("width", "300px");
+    img.setAttribute("height", "200px");
+
+   
+</script>
+</html>
