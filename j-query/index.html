@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js" integrity="sha256-8DGpv13HIm+5iDNWw1XqxgFB4mj+yOKFNb+tHBZOowc=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <div id="div1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, enim commodi saepe eius maxime illum eveniet consequuntur voluptatibus porro ipsa fugiat alias, ea minus doloribus officia delectus nisi? Recusandae, natus!
+    </div>
+    <button id="btn">
+        del
+    </button>
+</body>
+<script>
+    
+    $("#btn").click(()=>{
+        $("#div1").hide();
+    });
+    /*
+    let div1 = document.getElementById("div1");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", function(){
+        div1.style.display = "none";
+    });
+    */
+
+</script>
+</html>
