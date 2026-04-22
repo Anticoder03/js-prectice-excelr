@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS manipulation - 2</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="container">
+
+    </div>
+    <div id="toggle">
+        toggle
+    </div>
+
+    <div id="div4" class="box"></div>
+
+</body>
+<script>
+    div3 = document.getElementById("toggle");
+
+    div3.classList.add("box");
+    div3.addEventListener("click", function(){
+        div3.classList.toggle("box");
+    })
+    let div4 = document.getElementById("div4");
+
+    let style = getComputedStyle(div4).backgroundColor;
+    console.log(style);
+    console.log(getComputedStyle(div4).border);
+
+    console.log(getComputedStyle(div4).height);
+    console.log(getComputedStyle(div4).color);
+    //? console.log(getComputedStyle(div4));
+
+    console.log(div4.classList.contains("box"));
+    console.log(div4.classList.contains("box1"));
+
+        
+</script>
+</html>

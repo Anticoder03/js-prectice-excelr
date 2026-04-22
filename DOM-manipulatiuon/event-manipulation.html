@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+    }
+    #parent{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+    #child{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- <div onclick="click_event()">click</div>
+    <div class="container">
+        this is a box
+    </div>
+
+    <input type="tel" name="name" id="name">
+    <p id="p" style="border: 1px solid #000; height: 100px; width: 100px;">this is a paragraph</p>
+    <button id="btn">click</button> -->
+
+
+    <div id="parent">
+        <div id="child"><button id="innerchild">chick</button></div>
+    </div>
+</body>
+<script>
+    /*
+    let container = document.querySelector(".container");
+    let name = document.getElementById("name");
+    let p = document.getElementById("p");
+    let btn = document.getElementById("btn");
+
+
+    function click_event(){
+    console.log("click");
+    }
+
+    container.addEventListener("mouseenter", function(){
+        console.log("mouse enter container ");
+        container.style.color = "yellow";
+    });
+    name.addEventListener('keyup', function(){
+        console.log(name.value);
+    });
+
+
+    function click_p(){
+        console.log("click p");
+        p.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    }
+
+    p.addEventListener("click", click_p);
+    setTimeout(function(){
+        p.removeEventListener("click", click_p);
+    }, 5000);
+
+    btn.addEventListener("click", function(){
+        alert("click btn");
+    });
+    btn.addEventListener("myEvent", function(){
+        console.log("myEvent triggered");
+    });
+
+
+    setTimeout(function(){
+        let event = new CustomEvent("myEvent");
+        btn.dispatchEvent(event);
+    }, 5000);
+
+*/
+
+parent = document.getElementById("parent");
+child = document.getElementById("child");
+innerchild = document.getElementById("innerchild");
+
+parent.addEventListener("click", function(){
+   event.stopPropagation();
+    console.log("parent clicked");
+});
+
+child.addEventListener("click", function(){
+    event.stopPropagation();
+    console.log("child clicked");
+});
+
+innerchild.addEventListener("click", function(){
+    event.stopPropagation();
+    console.log("inner child clicked");
+});
+
+</script>
+</html>
