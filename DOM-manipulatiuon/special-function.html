@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let stud1 = {
+        name: "John",
+        
+    }
+    let stud2 = {
+        name: "Jane",
+        
+    }
+
+    function sayHello(){
+        console.log("Hello, " + this.name);
+    }
+    sayHello(stud1);
+    //sayHello.call(stud1);
+    //sayHello.call(stud2);
+
+    function greet(greeting){
+        console.log(greeting + ", " + this.name);
+    }
+    //greet.call(stud1, "Hi");
+    //greet.call(stud2, "Hello");
+
+    function introduce(age, city){
+        console.log("My name is " + this.name + ", I am " + age + " years old and I live in " + city);
+    }
+
+    //introduce.call(stud1, 25, "vapi");
+    //introduce.apply(stud2, [30, "surat"]);
+    let stud3 = {
+        name: "Alice",
+        task:function(){
+            console.log("Task for " + this.name);
+        }
+    }
+    let func = stud3.task;
+    func(); 
+    let func2 = stud3.task.bind(stud3);
+    func2();
+
+</script>
+</html>
