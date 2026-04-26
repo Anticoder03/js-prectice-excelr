@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bulb{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid red;
+        }
+
+        .btn{
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="bulb" id="bulb">
+
+    </div>
+    <button class="btn btn1" onclick="turnon()">on</button>
+    <button class="btn btn2" onclick="turnoff()">off</button>
+
+    <p>
+        <span id="colorDisplay"></span>
+    </p>
+
+</body>
+
+    <script>
+        let bulb = document.getElementById('bulb')
+        let onBtn = document.querySelector('.btn1')
+        let offBtn = document.querySelector('.btn2')
+        let colorDisplay = document.getElementById('colorDisplay')
+
+        function turnon(){
+            let color = prompt('enter the color');
+            bulb.style.backgroundColor = color;
+            colorDisplay.textContent = color;
+        }
+        function turnoff(){
+            bulb.style.backgroundColor = 'white';
+            colorDisplay.textContent = 'white';
+        }
+    </script>
+</html>
